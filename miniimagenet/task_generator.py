@@ -52,6 +52,7 @@ class MiniImagenetTask(object):
         self.train_num = train_num
         self.test_num = test_num
 
+        # Xクラスから 5クラスを選択
         class_folders = random.sample(self.character_folders,self.num_classes)
         labels = np.array(range(len(class_folders)))
         labels = dict(zip(class_folders, labels))
